@@ -8,10 +8,8 @@ function App() {
   return (
     <div>
       <Header />
-
       <CopyGenerator />
 
-	    <div className="footer"></div>
     </div>
   );
 }
