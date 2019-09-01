@@ -3,7 +3,8 @@ import React from 'react';
 function CopyBox(props) {
   return (
     <div className="copy">
-        <textarea defaultValue={props.copyString}></textarea>
+        <textarea readOnly 
+          value={props.copyString} />
     </div>
   );
 }

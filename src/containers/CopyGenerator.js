@@ -21,7 +21,7 @@ class CopyGenerator extends React.Component {
 			['Amenities', 'these', 'are','different','options'],
 		]
 		this.state = {
-		  copyString:  'Copy will go here',
+		  copyString:  '',
 		  showModal: false
 		}
 	}
@@ -34,10 +34,18 @@ class CopyGenerator extends React.Component {
 		this.setState({ showModal: false });
 	  };
 
+	addCopyTerm = event => {
+		let copy = this.state.copyString;
+		copy = copy + " " + event
+		this.setState({copyString : copy})
+	}
+
 	render() {
 		return (
 			<div className="main">
-			<SearchModal show={this.state.showModal} handleClose={this.hideModal} />
+			<SearchModal show={this.state.showModal} 
+				handleClose={this.hideModal}
+				handleClick={this.addCopyTerm} />
 				<div className="tool">
 					{/* Heading Phrase Tool  */}
 					<div className="section-bar">

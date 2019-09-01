@@ -64,7 +64,9 @@ class Modal extends React.Component {
       <div className="backdrop" style={backdropStyle}>
         <div className="modal" style={modalStyle}>
           <SearchInput textChange={this.handleSearchChange} />
-          <TermsResults termData={this.state.filteredTerms}/>
+          <TermsResults 
+            termData={this.state.filteredTerms}
+            termClick={this.props.handleClick}/>
 
           <button onClick={this.props.handleClose}>
             Close
